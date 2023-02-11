@@ -38,6 +38,11 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 What this fancy box plot shows are three categories of people's seating, front, middle, and back. What the notches on the boxes represent are confidence intervals around the median. Since the notches on the box labeled back do not overlap the front or middle boxes, there is strong evidence that the median differs. It's possible to hypothesize that the people seated in the back consume a higher average of alcohol than those seated in the front or middle.
 
 ## Numerical Summarys 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+
+The numerical data shows those who are seated in the back drank an average of 9 drinks. 9 drinks is 9 times than the average of those who sat in the front, and 3 times more than those seated in the middle. The Q1, Q3, and the median for people seated in the back are substantially higher than those seated in the front and middle.
 
 ## Inferential Tests
 

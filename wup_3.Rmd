@@ -52,6 +52,12 @@ summary.aov(model1)
 
 The inferential test proposes there is no difference on the amount of alcohol consumed between the front, middle, and back seats, but only at a 0.000116% chance. The chance of that happening is incredibly slim. Therefore, it is safe to reject the idea of there being no difference on the amount of alcohol consumed between the 3 seating positions.
 
+```{r}
+plot(TukeyHSD(model1))
+```
+
+The TukeyHSD test here shows that there is a difference on alcohol consumed between the front and back positions and middle and back positions. Because the front/back and middle/back categories does not cross over the confidence level at 0, we are able to determine that there is a difference on alcohol consumed. The middle/front category does cross over the confidence level, meaning that there is no difference on the alcohol consumed for that category.
+
 ## Conclusions
 
 
